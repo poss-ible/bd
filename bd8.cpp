@@ -32,7 +32,7 @@ int main()
         {
             if (Down(i))
             {
-                for (int j = 0; j < 100; ++i)
+                for (int j = 0; j < 10; ++j)
                 {
                     switch (i)
                     {
@@ -54,6 +54,7 @@ int main()
                         break;
                     }
                 }
+                sleep(1);
             }
         }
     }
