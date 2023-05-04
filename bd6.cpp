@@ -30,12 +30,12 @@ int main()
     {
         if (Down(1))
         {
+            mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
             for (int i = 0; i < 3; ++i)
             {
-                mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
                 mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+                mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
             }
-            sleep(1);
         }
     }
     return 0;
